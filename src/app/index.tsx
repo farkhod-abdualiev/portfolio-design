@@ -16,7 +16,7 @@ import {
 import React from "react";
 
 
-const Social = () => {
+const Social = () => {  
   const data = [
     {
       icon: <Linkedin className="block lg:hidden" />,
@@ -45,7 +45,20 @@ const Social = () => {
 }
 
 
-const Navbar = () => {
+const Navbar = () => {  
+  const [copied, setCopied] = useState(false);
+  const textToCopy = "farkhodabdualiev@gmail.com";
+
+  const copyText = async () => {
+    try {
+      await navigator.clipboard.writeText(textToCopy);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error("Nusxalashda xatolik yuz berdi!", err);
+    }
+  };
+  
   return (
     <nav className="hidden md:flex p-6 lg:pl-5 lg:pr-10 items-center">
       <div className="flex items-center gap-5">
@@ -53,7 +66,7 @@ const Navbar = () => {
           <span>
             farkhodabdualiev@gmail.com
           </span>
-          <button className="rounded-3xl px-10 py-2 bg-white cursor-pointer">Copy</button>
+          <button onClick={copyText} className="rounded-3xl px-10 py-2 bg-white cursor-pointer"> {copied ? "Copied!" : "Copy"} </button>
         </div>
         <a className="rounded-3xl px-10 py-2 bg-white" href="https://github.com/farkhod-abdualiev/cv" >Cv</a>
       </div>
