@@ -106,7 +106,7 @@ const Skills = () => {
     <section>
       <div className="flex flex-wrap gap-20 justify-evenly pb-24 pt-10 md:py-10">
         {data.map((item, index) => (
-          <figure key={index} className="flex flex-col items-center gap-2 hover:bg-neutral-200 rounded p-1">
+          <figure key={index} className="flex flex-col items-center gap-2">
             <img className="w-14 h-14 mb-2" src={item.img} alt="html&css" />
             <figcaption>
               <h2 className="font-medium text-xl">{item.title}</h2>
