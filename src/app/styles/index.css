@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+
+:root {
+    background: #D7D5D3;
+}
+
+.rounded-custom-bottom {
+    border-radius: 100px;
+    border-bottom-right-radius: 28px;
+    border-bottom-left-radius: 28px;
+
+}
+
+.rounded-custom-only-bottom {
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.rounded-custom-top {
+    border-radius: 100px;
+    border-top-right-radius: 28px;
+    border-top-left-radius: 28px;
+}
+
+@media screen and (max-width: 672px) {
+    .rounded-custom-bottom {
+        border-radius: 100px;
+        border-bottom-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .rounded-custom-top {
+        border-radius: 100px;
+        border-top-right-radius: 0px;
+        border-top-left-radius: 0px;
+    }
+}
+
+.bg-dotted-dark {
+    background-image: radial-gradient(circle at 1px 1px, #F2F1EF 1px, #EEECEB 0);
+    background-size: 5px 5px;
+}
+
+.bg-dotted {
+    background-image: radial-gradient(circle at 1px 1px, #F4F4F4 1px, #FCFBFC 0);
+    background-size: 5px 5px;
+}
+
+.handshake-bg {
+    background: linear-gradient(rgb(212, 211, 211), rgb(243, 241, 241), transparent, transparent);
+}
